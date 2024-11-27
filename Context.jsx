@@ -17,12 +17,15 @@ export const ContextProvider = ({ children }) => {
 
     const checkUser = async () => {
       if (token) {
-        const response = await fetch("http://localhost:3000/users", {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await fetch(
+          "https://chatbackend-three.vercel.app/users",
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();

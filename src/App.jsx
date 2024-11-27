@@ -10,7 +10,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-const socket = io("http://localhost:3000", {
+const socket = io("https://chatbackend-three.vercel.app/", {
   auth: {
     token: localStorage.getItem("token"),
   },

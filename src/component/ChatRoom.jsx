@@ -50,7 +50,7 @@ const ChatRoom = ({ selectedUser, socket }) => {
 
         try {
           const response = await fetch(
-            `http://localhost:3000/messages/${room}`,
+            `https://chatbackend-three.vercel.app/messages/${room}`,
             {
               method: "GET",
               headers: {
