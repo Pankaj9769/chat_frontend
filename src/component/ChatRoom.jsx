@@ -9,10 +9,10 @@ const ChatRoom = ({ selectedUser, socket }) => {
   const userList = JSON.parse(localStorage.getItem("userList"));
 
   const receiver = useMemo(() => {
-    if (userList) {
-      return userList.find((user) => user._id === selectedUser);
-    }
-    return null; // If userList is null or not set, return null
+    // if (userList) {
+    return userList.find((user) => user._id === selectedUser);
+    // }
+    // return null; // If userList is null or not set, return null
   }, [selectedUser]);
 
   const [onlineUsers, setOnlineUsers] = useState([]);
