@@ -13,7 +13,7 @@ const ChatRoom = ({ selectedUser, socket }) => {
       return userList.find((user) => user._id === selectedUser);
     }
     return null; // If userList is null or not set, return null
-  }, [selectedUser, userList]);
+  }, [selectedUser]);
 
   const [onlineUsers, setOnlineUsers] = useState([]);
 
